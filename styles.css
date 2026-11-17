@@ -1,0 +1,55 @@
+:root { color-scheme: light; font-family: "Courier New", Courier, monospace; color: #161616; background: #fff; font-synthesis: none; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; padding: 0 38px; }
+a { color: inherit; text-underline-offset: 4px; }
+button { font: inherit; color: inherit; cursor: pointer; }
+button, a { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 2px solid #161616; outline-offset: 5px; }
+.skip { position: absolute; top: -80px; background: white; padding: 15px; z-index: 5; }
+.skip:focus { top: 10px; }
+header { max-width: 1320px; margin: auto; padding: 35px 0 0; display: flex; justify-content: space-between; align-items: flex-start; }
+.name { font: 400 34px/1.1 Arial, Helvetica, sans-serif; letter-spacing: -1.5px; text-decoration: none; }
+.subtitle { font-size: 11px; margin: 10px 0 0; }
+.current { font-size: 12px; margin-top: 9px; }
+main { max-width: 1320px; margin: 64px auto 0; }
+h1 { font-size: 12px; line-height: 1.5; font-weight: 400; margin: 0 0 38px; }
+.project { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr) minmax(0, 1fr); gap: 28px; align-items: start; margin-bottom: 64px; }
+.photograph { min-width: 0; }
+.cover { display: block; width: 100%; padding: 0; border: 0; background: #fff; }
+.cover img { display: block; width: 100%; height: auto; }
+.cover:hover { opacity: .94; }
+h2 { font-size: 13px; line-height: 1.45; margin: 0; font-weight: 700; }
+.description { max-width: 365px; font-size: 12px; line-height: 1.65; }
+.description p { margin: 0 0 17px; }
+.description em { font-style: normal; }
+.image-caption { display: flex; justify-content: space-between; align-items: center; font-size: 10px; margin-top: 11px; gap: 10px; }
+.image-caption > span { color: #646464; }
+.view { border: 0; padding: 5px 0; background: none; font-size: 10px; }
+.view:hover { text-decoration: underline; text-underline-offset: 3px; }
+footer { max-width: 1320px; display: flex; justify-content: space-between; margin: 22px auto 0; padding: 28px 0 32px; font-size: 10px; }
+dialog { width: 100vw; height: 100dvh; max-width: none; max-height: none; padding: 26px 32px; border: 0; background: white; color: #161616; }
+dialog[open] { display: grid; grid-template-rows: auto minmax(0, 1fr) auto; gap: 20px; }
+dialog::backdrop { background: white; }
+body:has(dialog[open]) { overflow: hidden; }
+.gallery-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; }
+.gallery-head button, .gallery-stage button { border: 0; padding: 8px; background: none; font-size: 12px; }
+.gallery-head h2 { padding-top: 6px; }
+.gallery-stage { display: grid; grid-template-columns: 42px minmax(0, 1fr) 42px; align-items: center; min-height: 0; gap: 15px; }
+.gallery-stage img { grid-column: 2; grid-row: 1; width: 100%; height: 100%; min-height: 0; object-fit: contain; }
+.gallery-stage button:first-child { grid-column: 1; grid-row: 1; }
+.gallery-stage button:last-child { grid-column: 3; grid-row: 1; }
+.gallery-stage button { font-size: 24px; min-height: 44px; }
+.gallery-bottom { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+#gallery-count { font-size: 11px; margin: 0; }
+#thumbnails { display: flex; gap: 9px; max-width: 100%; padding: 5px; overflow-x: auto; }
+#thumbnails[hidden] { display: none; }
+.thumbnail { padding: 0; border: 0; flex: 0 0 35px; background: transparent; opacity: .45; }
+.thumbnail[aria-current="true"] { opacity: 1; outline: 1px solid #161616; outline-offset: 3px; }
+.thumbnail img { display: block; width: 35px; height: 45px; object-fit: cover; }
+@media (min-width: 1600px) { main { margin-top: 80px; } }
+@media (max-width: 850px) { body { padding: 0 24px; } .project { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px 28px; } .photograph { grid-row: span 2; } .description { grid-column: 2; } h2 { font-size: 12px; } }
+@media (max-width: 560px) { body { padding: 0 20px; } header { padding-top: 25px; } .name { font-size: 29px; } .subtitle { font-size: 10px; } main { margin-top: 48px; } h1 { margin-bottom: 28px; } .project { display: flex; flex-direction: column; gap: 20px; margin-bottom: 52px; } .photograph { width: 100%; } h2 { font-size: 13px; } .description { max-width: none; } .description p:last-child { margin-bottom: 0; } dialog { padding: 18px 12px; gap: 12px; } .gallery-stage { grid-template-columns: 28px minmax(0, 1fr) 28px; gap: 3px; } .gallery-head h2 { font-size: 11px; } footer { padding-top: 10px; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+#gallery-caption { font-size: 11px; line-height: 1.5; text-align: center; margin: 0; }

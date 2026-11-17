@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Selected Design and Technology projects by Jason Reiber. Local AI storytelling, bioreactors, environmental sensing, TinyML and wearable safety systems.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Jason Reiber — Projects</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="projects.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#projects">Skip to projects</a>
+  <header>
+    <div><a class="name" href="./">Jason Reiber</a><p class="subtitle">Design and Technology</p></div>
+    <a class="current" href="#projects" aria-current="page">Projects</a>
+  </header>
+  <main id="projects">
+    <h1>Selected projects</h1>
+    <article id="koma" class="project">
+      <div class="photograph">
+        <button class="cover" data-project="koma" aria-label="View photographs of KOMA and its construction"><img src="images/koma-cover-v2.webp" width="1152" height="1536" alt="KOMA toolbox with brown fabric, tan leather edging, an aluminium handle and a printed electronics base." fetchpriority="high"></button>
+        <div class="image-caption"><span>1 / 11</span><button class="view" data-project="koma">View progression <span aria-hidden="true">↗</span></button></div>
+      </div>
+      <h2>KOMA<br>Local AI Toolbox</h2>
+      <div class="description"><p><a href="https://github.com/Jreiber1029/AI-Toolbox" target="_blank" rel="noopener noreferrer">Project documentation on GitHub ↗</a></p><p>What started as a solution to a practical problem became something much more. KOMA began as a vision-language model fine-tuned on construction data, housed in a toolbox alongside an air quality monitor. The aim was to explore whether continuous safety monitoring could run on a portable device with limited computing power.</p><p>Developing the prototype taught me about the constraints of building AI systems and the importance of open-source software and openly available models, including Qwen 3.5 VLM 2B. It also raised a challenge: a construction-specific safety system is difficult to demonstrate meaningfully in an exhibition, while access to construction sites for testing is limited.</p><p>I began using the toolbox itself as a storytelling medium. KOMA now explores a speculative future where access to open AI models is restricted to select people and uses. Its fictional history draws parallels with the concentration of ownership and erosion of privacy on today’s internet, asking what is at stake when people lose the ability to run and adapt AI for themselves.</p><p>The system brings together a custom YOLO26n model, a fine-tuned vision-language model, speech recognition and a custom text-to-speech voice. Its extensive retrieval-augmented knowledge base (RAG) draws on local health and safety legislation and guidance, alongside the history and characters of the speculative world, so KOMA can respond in context.</p><p>At the exhibition, visitors can scan one of two ID cards to start a conversation with KOMA in English or Chinese. In Safety Manager mode, they can show KOMA a scene and ask about what it sees. Its fine-tuned vision-language model draws on the RAG’s local health and safety legislation and guidance to offer context-aware safety advice.</p><p>Work in progress — nearing completion.</p></div>
+    </article>
+    <article id="ppes" class="project">
+      <div class="photograph">
+        <button class="cover" data-project="ppes" aria-label="View photograph of PPES"><img src="images/ppes-01.webp" width="900" height="675" alt="PPES prototype worn across the chest on a black strap, with its camera positioned below the wearer's face." loading="lazy"></button>
+        <div class="image-caption"><span>1 / 1</span><button class="view" data-project="ppes">View photograph <span aria-hidden="true">↗</span></button></div>
+      </div>
+      <h2>PPES<br>Personal Protection<br>and Exposure System</h2>
+      <div class="description"><p>A wearable prototype designed to give workers greater awareness of their environment. PPES combines air quality sensing with camera-based PPE classification on an Arduino UNO Q.</p><p>When readings cross a threshold, distinct audible alerts and an LED matrix signal the detected hazard. The system checks whether protective equipment is being worn and records sensor readings, exposure events and PPE status for review through a local dashboard.</p><p><a href="https://www.hackster.io/JSONR/ppes-personal-protection-and-exposure-system-43fd14" target="_blank" rel="noopener noreferrer">Full project on Hackster ↗</a></p></div>
+    </article>
+    <article id="bioreactor" class="project">
+      <div class="photograph">
+        <button class="cover" data-project="bioreactor" aria-label="View photographs of the Aerobic Bioreactor Simulator"><img src="images/bioreactor-01.webp" width="1200" height="1800" alt="Aerobic bioreactor simulator in a glass enclosure, with exposed tubing, a humidity and temperature display, and red and green lighting." loading="lazy"></button>
+        <div class="image-caption"><span>1 / 9</span><button class="view" data-project="bioreactor">View photographs <span aria-hidden="true">↗</span></button></div>
+      </div>
+      <h2>Aerobic Bioreactor<br>Simulator</h2>
+      <div class="description"><p>An exploration of decomposition through a constructed environment. The aerobic bioreactor simulator brings organic matter, sensors and exposed electronics together in a glass enclosure, with a display showing temperature and humidity.</p><p>The project is accompanied by <em>Manifesto for Responsible Digestion</em>, an owner's manual for the simulator.</p></div>
+    </article>
+    <article id="tinyml" class="project">
+      <div class="photograph">
+        <button class="cover" data-project="tinyml" aria-label="View photographs of Audio DEV C3"><img src="images/tinyml-01.webp" width="1200" height="1800" alt="Audio DEV C3: a compact black and white audio and air quality recorder with an illuminated display, push buttons and a metal toggle switch." loading="lazy"></button>
+        <div class="image-caption"><span>1 / 4</span><button class="view" data-project="tinyml">View photographs <span aria-hidden="true">↗</span></button></div>
+      </div>
+      <h2>Audio DEV C3<br>TinyML Audio +<br>Air Quality Recorder</h2>
+      <div class="description"><p>A portable recorder for building TinyML training datasets from workplace sounds and air quality. Built around an ESP32-C3, it pairs microphone recordings with measurements from a SEN66 environmental sensor.</p><p>Physical buttons let the user label activities such as drilling, sanding and grinding, then record audio alone or alongside environmental readings. The device works offline, saving timestamped WAV audio and Edge Impulse-compatible CSV data to a microSD card for training models to recognise hazardous workplace conditions.</p><p><a href="https://github.com/Jreiber1029/AUDIO-DEV-c3" target="_blank" rel="noopener noreferrer">Project documentation on GitHub ↗</a></p></div>
+    </article>
+  </main>
+  <footer><span>Jason Reiber</span><a href="#projects">Back to top ↑</a></footer>
+  <dialog aria-labelledby="gallery-title" id="gallery">
+    <div class="gallery-head"><h2 id="gallery-title"></h2><button id="close-gallery" aria-label="Close photographs">Close ×</button></div>
+    <div class="gallery-stage"><button id="previous" aria-label="Previous photograph">←</button><img id="gallery-image" alt=""><button id="next" aria-label="Next photograph">→</button></div>
+    <div class="gallery-bottom"><p id="gallery-caption" hidden></p><p id="gallery-count" aria-live="polite"></p><div id="thumbnails" aria-label="Choose photograph"></div></div>
+  </dialog>
+</body>
+</html>
